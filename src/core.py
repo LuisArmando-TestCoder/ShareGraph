@@ -20,7 +20,11 @@ cleanActionsNames = getCleanedStrings(
 selectedAction = getSelectedOption(cleanActionsNames)
 
 # Execute the action
-moduleLikePath = getModuleLikePath(actionsNames[0])
+moduleLikePath = getModuleLikePath(
+    next(
+        filter(lambda path: selectedAction in path, actionsNames)
+    )
+)
 
 # Get action from file
 action = __import__(
