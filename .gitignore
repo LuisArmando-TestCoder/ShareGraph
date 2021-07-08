@@ -1,1 +1,23 @@
 __pycache__
+
+# Ignore all json stores
+store.json
+
+# Ignore system files
+Thumbs.db
+.DS_Store
+
+# Ignore Logs
+logs
+*.log
+
+# Ignore the build directory
+/dist
+
+# The file containing environment variables 
+.env
+
+# Ignore IDE specific files
+.idea/
+.vscode/
+*.sw*
