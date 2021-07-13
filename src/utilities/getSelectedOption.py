@@ -6,7 +6,7 @@ def getSelectedOption(options):
             print(f"- {option}")
 
         selectMessage = "Please type one of the options from the list above: "
-        selectedOption = input(selectMessage)
+        selectedOption = input(selectMessage).strip()
 
         if selectedOption in options:
             print(f"You selected {selectedOption}")
