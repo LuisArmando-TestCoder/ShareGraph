@@ -26,14 +26,14 @@ def main():
         if getBasicValidInput("(yes/no)") == "yes":
             clientId = createUser()
 
-    while getBasicValidInput("Want to add products to the claim? (yes/no)") == "yes":
-        productDictionary = {
+    while getBasicValidInput("Want to add products to the bill? (yes/no)") == "yes":
+        billDictionary = {
             "client": clientId,
             "name": getBasicValidInput("Product name"),
             "amount": int(getBasicValidInput("Product amount")),
         }
 
-        products.append(productDictionary)
+        products.append(billDictionary)
 
     addDictionaryToFileStore(filePath, products)
 
